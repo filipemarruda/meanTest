@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://localhost/mean-prod',
+  db: 'mongodb://appUser:qwer1234@kahana.mongohq.com:10067/simpleApp',
   /**
    * Database options that will be passed directly to mongoose.connect
    * Below are some examples.
