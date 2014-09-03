@@ -1,0 +1,21 @@
+<section data-ng-controller="LinksController" data-ng-init="find()">
+  <ul class="links unstyled">
+    <li data-ng-repeat="link in links">
+      <span>{{link.created | date:'medium'}}</span> /
+      <span>{{link.user.name}}</span>
+      <h2>
+        <a data-ng-href="#!/links/{{link._id}}">{{link.label}}</a>
+        <span data-ng-if="hasAuthorization(link)">
+          <a class="btn" href="/#!/links/{{link._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(link);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+      <div>{{link.link}}</div>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!links || links.length">No links yet. <br> Why don't you <a href="/#!/links/create">Create One</a>?</h1>
+</section>

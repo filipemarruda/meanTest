@@ -1,0 +1,14 @@
+<section data-ng-controller="LinksController" data-ng-init="findOne()">
+  <span>{{link.created | date:'medium'}}</span> /
+  <span>{{link.user.name}}</span>
+  <h2>{{link.label}}</h2>
+  <div data-ng-if="hasAuthorization(link)">
+    <a class="btn" href="/#!/links/{{link._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn" data-ng-click="remove(link);">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div>{{link.link}}</div>
+</section>

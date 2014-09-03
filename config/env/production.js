@@ -27,7 +27,7 @@ module.exports = {
     */
   },
   app: {
-    name: 'MEAN - A Modern Stack - Production'
+    name: 'Sistema de Orçamento Participativo'
   },
   facebook: {
     clientID: 'APP_ID',
